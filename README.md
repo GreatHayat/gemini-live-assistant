@@ -1,54 +1,85 @@
-# React + TypeScript + Vite
+# Gemini Live Assistant
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a chatbot app that lets you have conversations using both text and voice. It uses the **Gemini LIVE API** from Google and is built with **React**, **TypeScript**, and **Vite**, with styling from **TailwindCSS**.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<img width="1439" alt="Screenshot 2025-04-30 at 1 23 38 PM" src="https://github.com/user-attachments/assets/2a778ba0-ed54-45d1-ad84-11f37155bb20" />
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Conversational chatbot with text and audio support.
+- Built with modern web technologies: React, TypeScript, and Vite.
+- Styled using TailwindCSS.
+- Includes syntax highlighting for code blocks in conversations..
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Prerequisites
+
+Before getting started, make sure you have:
+
+- Node.js (version 18 or above)
+- npm or yarn installed
+- A Gemini API key from [Google AI Studio](https://ai.google/studio/)
+
+## Installation
+
+1. Clone the project:
+   ```
+   git clone https://github.com/GreatHayat/gemini-live-assistant.git
+   cd gemini-live-assistant
+   ```
+
+2. Install the required packages:
+   ```
+   npm install
+   ```
+
+3. Start the development server:
+   ```
+   npm run dev
+   ```
+
+## Environment Configuration
+
+To connect the app with Gemini:
+
+1. Get your Gemini API key from [Google AI Studio](https://ai.google/studio/)
+2. Create a file named `.env.local` in the project root
+3. Copy the structure from `.env.sample`
+4. Add your API key:
+   ```
+   VITE_GEMINI_API_KEY=your-api-key-here
+   ```
+
+## Available Scripts
+
+- `npm run dev` – Starts the development server
+- `npm run build` – Builds the app for production
+- `npm run lint` – Checks the code for issues
+- `npm run preview` – Previews the production build locally
+
+## Usage
+
+After starting the development server, open your browser at:
+
+```
+http://localhost:5173
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Start chatting with the assistant using text or voice.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Contributing
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Want to contribute? Follow these steps:
+
+1. Fork the repository
+2. Create a new branch
+3. Make your changes
+4. Open a pull request
+
+## License
+
+This project is open-source. You're welcome to use and improve it!
+
+---
+
+Let me know if you’d like a version that includes screenshots or deployment instructions (e.g., for Vercel or Netlify).
